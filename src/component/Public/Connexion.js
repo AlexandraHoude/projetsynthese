@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form';
-import Button from "react-bootstrap/Button";
 import "./Public.scss";
+import {Button} from "react-bootstrap";
+import {utilisateur} from "../../../public/utilisateur";
+
 
 /**
  * Formulaire de connexion
  */
 
-class Connexion extends Component {
+class Connexion extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+        console.log(utilisateur);
+    }
+
     render() {
         return (
             <div className="col-4 formulaire-connexion">
                 <h3>Identification</h3>
                 <br/>
-                <Form>
+                <Form onSubmit={this.handleSubmit.bind(this)}>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control type="email" placeholder="Enter email" />
@@ -28,12 +39,12 @@ class Connexion extends Component {
                     <Form.Group controlId="formBasicCheckbox">
                         <Form.Check type="checkbox" label="Check me out" />
                     </Form.Group>
-                    <Button variant="primary" type="submit">
+                    <Button type="submit">
                         Submit
                     </Button>
                 </Form>
             </div>
-            
+
         );
     }
 }
