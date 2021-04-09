@@ -1,0 +1,42 @@
+export const utilisateur =  [
+  {
+    "id": 32,
+	"Nom": "etudiant",
+	"Prenom": "mr",
+	"entreprise": "Non",
+	"Nom entreprise": "Texte",
+	"Adresse": "Texte",
+	"Ville": "Gramby",
+	"Region": "Texte",
+	"Logo": "Texte",
+	"Courriel": "Texte",
+	"Telephone": "Texte",
+	"Site": "Texte",
+	"CV": "",
+	"Mot de passe": "Texte",
+	"Actif": "Oui",
+	"Supprime": "Non",
+	"Valide": "Oui",
+	"Niveau acces": 111
+  },
+  {
+    "id": 33,
+	"Nom": "entreprise",
+	"Prenom": "mr",
+	"entreprise": "Oui",
+	"Nom entreprise": "Texte",
+	"Adresse": "Texte",
+	"Ville": "Gramby",
+	"Region": "Texte",
+	"Logo": "Texte",
+	"Courriel": "Texte",
+	"Telephone": "Texte",
+	"Site": "Texte",
+	"CV": "",
+	"Mot de passe": "Texte",
+	"Actif": "Oui",
+	"Supprime": "Non",
+	"Valide": "Oui",
+	"Niveau acces": 333
+  }
+]

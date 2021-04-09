@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form';
 import "./Public.scss";
 import {Button} from "react-bootstrap";
-import {utilisateur} from "../../../public/utilisateur";
+import {utilisateur} from "../../data/utilisateur.js";
 
 
 /**
