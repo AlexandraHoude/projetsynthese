@@ -6,6 +6,7 @@ import Candidats from "./component/Public/Candidats";
 import APropos from "./component/Public/APropos";
 import PageConnexion from "./component/Public/PageConnexion";
 import PageListeOffreStage from "./component/Public/PageListeOffreStage";
+import AccueilAdmin from "./component/Admin/AccueilAdmin";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               <Route path="/candidats" component={Candidats} />
               <Route path="/connexion" component={PageConnexion} />
               <Route path="/apropos" component={APropos} />
+              <Route path="/admin" component={AccueilAdmin} />
               <Route component={Error} />
           </Switch>
       </main>

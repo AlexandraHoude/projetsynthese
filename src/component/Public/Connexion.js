@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import "./Public.scss";
 import {Button} from "react-bootstrap";
 import {utilisateur} from "../../data/utilisateur.js";
+import { Redirect } from "react-router-dom";
 
 /**
  * Formulaire de connexion
@@ -14,7 +15,8 @@ class Connexion extends React.Component {
         this.state = {
             email: '',
             pass: '',
-            typeConnexion: ''
+            typeConnexion: '',
+            redirect: null
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -51,7 +53,7 @@ class Connexion extends React.Component {
      *
      * @param user
      * @param passwordInput
-     * @returns {null|number}
+     * @returns {number}
      */
     verifyIfUserCanLoginAndGetAccesLevel(user, passwordInput) {
         let pass =  user.filter(v => v.password.includes(passwordInput));
@@ -59,7 +61,7 @@ class Connexion extends React.Component {
         if (pass.length > 0) {
             return pass[0].acces;
         }
-        return null;
+        return 0;
     }
 
     /**
@@ -74,8 +76,10 @@ class Connexion extends React.Component {
         if (user) {
             let acces = this.verifyIfUserCanLoginAndGetAccesLevel(user, this.state.pass);
 
-            if (acces !== null && acces !== '')
-                localStorage.setItem('connexion_type', acces);
+            if (acces > 0) {
+                localStorage.setItem('connexion_type', acces + "");
+                this.setState({ redirect: "/admin" });
+            }
         }
     }
 
@@ -85,6 +89,10 @@ class Connexion extends React.Component {
      * @returns {JSX.Element}
      */
     render() {
+        if (this.state.redirect) {
+            return <Redirect to={this.state.redirect} />
+        }
+
         return (
             <div className="col-4 formulaire-connexion">
                 <h3>Identification</h3>
