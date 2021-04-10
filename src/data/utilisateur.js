@@ -9,15 +9,15 @@ export const utilisateur =  [
 	"Ville": "Gramby",
 	"Region": "Texte",
 	"Logo": "Texte",
-	"Courriel": "Texte",
+	"Courriel": "etudiant@cegep.com",
 	"Telephone": "Texte",
 	"Site": "Texte",
 	"CV": "",
-	"Mot de passe": "Texte",
+	"password": "1q2w3e4r",
 	"Actif": "Oui",
 	"Supprime": "Non",
 	"Valide": "Oui",
-	"Niveau acces": 111
+	"acces": 111
   },
   {
     "id": 33,
@@ -29,14 +29,14 @@ export const utilisateur =  [
 	"Ville": "Gramby",
 	"Region": "Texte",
 	"Logo": "Texte",
-	"Courriel": "Texte",
+	"Courriel": "entreprise@business.com",
 	"Telephone": "Texte",
 	"Site": "Texte",
 	"CV": "",
-	"Mot de passe": "Texte",
+	"password": "1q2w3e4r",
 	"Actif": "Oui",
 	"Supprime": "Non",
 	"Valide": "Oui",
-	"Niveau acces": 333
+	"acces": 333
   }
 ]
