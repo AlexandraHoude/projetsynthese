@@ -14,8 +14,6 @@ class DemandeStage extends Component {
     render() {
         return(
             <div>
-                <NavBarAdmin></NavBarAdmin>
-                <Sidebar></Sidebar>
                 <div>
                     <h2>Demandes de stage <FontAwesomeIcon icon={faHandPointDown}/></h2>
                     <br/>
