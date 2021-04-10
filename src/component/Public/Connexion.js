@@ -72,7 +72,7 @@ class Connexion extends React.Component {
 
         let user = this.getUserInfosByEmail(this.state.email);
         if (user) {
-            let acces = this.verifyIfUserCanLogin(user, this.state.pass);
+            let acces = this.verifyIfUserCanLoginAndGetAccesLevel(user, this.state.pass);
 
             if (acces !== null && acces !== '')
                 localStorage.setItem('connexion_type', acces);
