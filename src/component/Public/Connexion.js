@@ -15,7 +15,6 @@ class Connexion extends React.Component {
         this.state = {
             email: '',
             pass: '',
-            typeConnexion: '',
             redirect: null
         };
 
