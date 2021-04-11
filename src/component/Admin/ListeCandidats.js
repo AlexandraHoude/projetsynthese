@@ -12,7 +12,7 @@ import {faHandPointDown} from "@fortawesome/free-solid-svg-icons";
 class ListeCandidats extends Component {
     render() {
         return(
-            <div>
+            <div className="liste-candidats">
                 <h2>Liste des candidats <FontAwesomeIcon icon={faHandPointDown}/></h2>
                 <br/>
                 <CardColumns>

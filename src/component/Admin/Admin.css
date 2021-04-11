@@ -16,4 +16,16 @@ Button {
   margin: 0.3125rem;
 }
 
+.stage-demande {
+  padding: 2% 6%;
+}
+
+.liste-candidats {
+  padding: 2% 6%;
+}
+
+.navbar {
+  padding-left: 5% !important;
+}
+
 /*# sourceMappingURL=Admin.css.map */

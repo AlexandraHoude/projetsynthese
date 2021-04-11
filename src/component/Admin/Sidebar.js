@@ -11,7 +11,7 @@ import { faCoffee, faUserNinja, faHome, faGraduationCap, faUserTie, faSignOutAlt
 
 function Sidebar() {
     return (
-        <SideNav onSelect={selected => {  }}>
+        <SideNav>
             <SideNav.Toggle />
             <SideNav.Nav defaultSelected="home">
                 <NavItem eventKey="home">

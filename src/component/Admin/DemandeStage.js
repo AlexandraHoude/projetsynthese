@@ -13,7 +13,7 @@ import Sidebar from "./Sidebar";
 class DemandeStage extends Component {
     render() {
         return(
-            <div>
+            <div className="stage-demande">
                 <div>
                     <h2>Demandes de stage <FontAwesomeIcon icon={faHandPointDown}/></h2>
                     <br/>
