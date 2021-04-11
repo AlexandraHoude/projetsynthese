@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Sidebar from "./Sidebar";
 import NavBarAdmin from "./NavBarAdmin";
-import ListeCandidats from "./ListeCandidats";
+import OffreStage from "./OffreStage";
 import DemandeStage from "./DemandeStage";
 
 /**
@@ -30,7 +30,7 @@ class AccueilAdmin extends Component {
                 <div>
                     <NavBarAdmin></NavBarAdmin>
                     <Sidebar></Sidebar>
-                    <ListeCandidats></ListeCandidats>
+                    <OffreStage></OffreStage>
                 </div>
             )
         }

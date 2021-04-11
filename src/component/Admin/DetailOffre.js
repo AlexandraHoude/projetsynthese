@@ -4,27 +4,27 @@ import {faHandPointDown, faUserGraduate} from '@fortawesome/free-solid-svg-icons
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import DemandeStage from "./DemandeStage";
+import OffreStage from "./OffreStage";
 
 /**
- * Tableau de la détail de demande de stage
+ * Tableau de la détail d'offre de stage
  */
 
-class DetailDemande extends Component {
+class DetailOffre extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showDemandeStage: false
+            showOffreStage: false
         };
     }
 
     handleOnClickRetourListe() {
-        this.setState({ showDemandeStage: true });
+        this.setState({ showOffreStage: true });
     }
 
     render() {
-        if (this.state.showDemandeStage) {
-            return <DemandeStage></DemandeStage>
+        if (this.state.showOffreStage) {
+            return <OffreStage></OffreStage>
         }
 
         return(
@@ -54,7 +54,7 @@ class DetailDemande extends Component {
                         </thead>
                         <tbody>
                         <tr>
-                            <th>Établissement scolaire</th>
+                            <th>Entreprise</th>
                             <td>Cégep de Trois-Rivières</td>
                         </tr>
                         <tr>
@@ -116,4 +116,4 @@ class DetailDemande extends Component {
     }
 }
 
-export default DetailDemande;
+export default DetailOffre;
