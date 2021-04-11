@@ -6,22 +6,36 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import NavBarAdmin from "./NavBarAdmin";
 import Sidebar from "./Sidebar";
+import DemandeStage from "./DemandeStage";
 
 /**
  * Tableau de la détail de demande de stage
  */
 
 class DetailDemande extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            showDemandeStage: false
+        };
+    }
+
+    handleOnClickRetourListe() {
+        this.setState({ showDemandeStage: true });
+    }
+
     render() {
+        if (this.state.showDemandeStage) {
+            return <DemandeStage></DemandeStage>
+        }
+
         return(
-            <div>
-                <NavBarAdmin></NavBarAdmin>
-                <Sidebar></Sidebar>
+            <div className="stage-demande-detail">
                 <h1>Détail de la demande de stage <FontAwesomeIcon icon={faHandPointDown}/></h1>
                 <br/>
                 <div className="row">
                     <div className="col-8">
-                        <Button variant="danger">Retour à la liste</Button>
+                        <Button onClick={this.handleOnClickRetourListe.bind(this)} variant="danger">Retour à la liste</Button>
                     </div>
                     <div className="col-4">
                         <Button variant="outline-success">Modifier</Button>
@@ -32,7 +46,7 @@ class DetailDemande extends Component {
                 <hr/>
                 <br/>
                 <div className="col-6">
-                    <h2><FontAwesomeIcon icon={faUserGraduate}/> Développeur Web</h2>
+                    <h2><FontAwesomeIcon icon={faUserGraduate}/>{this.props.od.titre}</h2>
                     <Table striped bordered hover>
                         <thead>
                         <tr>
@@ -47,7 +61,7 @@ class DetailDemande extends Component {
                         </tr>
                         <tr>
                             <th>Programme de formation</th>
-                            <td>Développement Web</td>
+                            <td>{this.props.od.programmeSuivi}</td>
                         </tr>
                         <tr>
                             <th>Compétences acquise durant le programme</th>
@@ -55,45 +69,35 @@ class DetailDemande extends Component {
                         </tr>
                         <tr>
                             <th>Secteur d'activité</th>
-                            <td>Technologies de l'information</td>
+                            <td>{this.props.od.secteur}</td>
                         </tr>
                         <tr>
                             <th>Ville</th>
-                            <td>Shawinigan</td>
+                            <td>{this.props.od.ville}</td>
                         </tr>
                         <tr>
                             <th>Type de stage</th>
                             <td>temps plein</td>
                         </tr>
                         <tr>
-                            <th>Last Name</th>
-                            <td>2021-05-15</td>
-                        </tr>
-                        <tr>
                             <th>Date de début</th>
-                            <td>2021-06-15</td>
+                            <td>{this.props.od.debut}</td>
                         </tr>
                         <tr>
                             <th>Date de fin</th>
-                            <td>test</td>
-                        </tr>
-                        <tr>
-                            <th>Last Name</th>
-                            <td>test</td>
+                            <td>{this.props.od.fin}</td>
                         </tr>
                         <tr>
                             <th>Nombre d'heure semaine</th>
-                            <td>25 heures</td>
+                            <td>{this.props.od.nombreHeureSemaine}</td>
                         </tr>
                         <tr>
                             <th>Rémunération</th>
-                            <td>à la discrétion de l'entreprise</td>
+                            <td>{this.props.od.remuneration}</td>
                         </tr>
                         <tr>
                             <th>Informations supplémentaires</th>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat.</td>
+                            <td>{this.props.od.informationSupplementaire}</td>
                         </tr>
                         </tbody>
                     </Table>

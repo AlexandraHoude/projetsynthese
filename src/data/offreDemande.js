@@ -4,16 +4,22 @@ export const offreDemande =  [
     "titre": "Technicien en architecture",
     "type": "offre",
     "secteur": 61,
-    "ville": "Montreal",
-    "date de debut": "1989-05-04",
-    "date de fin": "1984-10-20",
+    "ville": "Trois-Rivières",
+    "debut": "2021-03-15",
+    "fin": "2021-06-15",
     "duree stage": "",
-    "description": "blabla",
-    "nombre heure semaine": 2,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n" +
+        "                                    incididunt ut labore et dolore magna aliqua.\n" +
+        "                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\n" +
+        "                                    commodo consequat.",
+    "nombreHeureSemaine": 32,
     "comptetences recherchees": "",
     "emploi apres stage": "Oui",
-    "information supplementaire": "",
-    "programme suivi": "",
+    "informationSupplementaire": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n" +
+        "                                    incididunt ut labore et dolore magna aliqua.\n" +
+        "                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\n" +
+        "                                    commodo consequat.",
+    "programmeSuivi": "Développement Web",
     "autres formations": "",
     "competences acquises": "",
     "description du poste recherchee": "",
@@ -29,56 +35,68 @@ export const offreDemande =  [
   },
   {
     "id": 90,
-    "titre": "technicien en architecture",
-    "type": "offre",
-    "secteur": 61,
+    "titre": "Développeur Web",
+    "type": "demande",
+    "secteur": "Technologies de l'information",
     "ville": "québec",
-    "date de debut": "1989-05-04",
-    "date de fin": "1984-10-20",
+    "debut": "1989-05-04",
+    "fin": "1984-10-20",
     "duree stage": "",
-    "description": "bdasijad ojijsd jojasidj jisd oijdijad ",
-    "nombre heure semaine": 2,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n" +
+        "                                    incididunt ut labore et dolore magna aliqua.\n" +
+        "                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\n" +
+        "                                    commodo consequat.",
+    "nombreHeureSemaine": 32,
     "comptetences recherchees": "",
     "emploi apres stage": "Oui",
-    "information supplementaire": "",
-    "programme suivi": "",
+    "informationSupplementaire": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n" +
+        "                                    incididunt ut labore et dolore magna aliqua.\n" +
+        "                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\n" +
+        "                                    commodo consequat.",
+    "programmeSuivi": "",
     "autres formations": "",
     "competences acquises": "",
     "description du poste recherchee": "",
     "type de stage": "",
     "duree de stage": 12,
-    "remuneration": 12,
+    "remuneration": 24,
     "date de parution": "2010-09-09",
     "autres informations": "",
-    "auteur": "",
+    "auteur": 32,
     "actif": "",
     "supprime": "",
     "valide": ""
   },
   {
     "id": 91,
-    "titre": "technicien en architecture",
+    "titre": "Developpeur front-end",
     "type": "demande",
-    "secteur": 61,
+    "secteur": "Technologies de l'information",
     "ville": "québec",
-    "date de debut": "1989-05-04",
-    "date de fin": "1984-10-20",
+    "debut": "2021-03-18",
+    "fin": "2021-07-15",
     "duree stage": "",
-    "description": "bdasijad ojijsd jojasidj jisd oijdijad ",
-    "nombre heure semaine": 2,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n" +
+        "                                    incididunt ut labore et dolore magna aliqua.\n" +
+        "                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\n" +
+        "                                    commodo consequat.",
+    "nombreHeureSemaine": 40,
     "comptetences recherchees": "",
     "emploi apres stage": "Oui",
-    "information supplementaire": "",
-    "programme suivi": "",
+    "informationSupplementaire": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n" +
+        "                                    incididunt ut labore et dolore magna aliqua.\n" +
+        "                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\n" +
+        "                                    commodo consequat.",
+    "programmeSuivi": "",
     "autres formations": "",
     "competences acquises": "",
     "description du poste recherchee": "",
     "type de stage": "",
     "duree de stage": 12,
-    "remuneration": 12,
+    "remuneration": "à la discrétion de l'entreprise",
     "date de parution": "2010-09-09",
     "autres informations": "",
-    "auteur": "",
+    "auteur": 32,
     "actif": "",
     "supprime": "",
     "valide": ""
