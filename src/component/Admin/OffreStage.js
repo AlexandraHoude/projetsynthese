@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faHandPointDown} from '@fortawesome/free-solid-svg-icons'
 import {offreDemande} from "../../data/offreDemande";
 import DetailOffre from "./DetailOffre";
+import AjoutOffreDemandeStage from "./AjoutOffreDemandeStage";
 
 /**
  * Composant comprenant les cartes d'offre de stage
@@ -15,25 +16,59 @@ class OffreStage extends Component {
         super(props);
         this.state = {
             showDetails: false,
-            currentOd: null
+            showModif: false,
+            currentOd: null,
+            demandes: offreDemande
         };
     }
 
+    /**
+     * Fonction qui affiche les détails d'une demande lors du clique sur le bouton détail
+     * @param od l'objet d'offre/demande courant
+     */
     handleOnClickDetail(od) {
         this.setState({ currentOd: od });
         this.setState({ showDetails: true });
     }
 
+    /**
+     * Fonction qui supprime une offre choisi
+     * @param od
+     */
+    handleOnClickDelete(od) {
+        this.setState(prevstate => {
+            const demande = prevstate.demandes.filter(offreDem => offreDem.id !== od.id);
+            return { demandes: demande };
+        });
+    }
+
+    /**
+     * Fonction pour modifier une offre
+     * @param od
+     */
+    handleOnClickModif(od) {
+        this.setState({ currentOd: od });
+        this.setState({ showModif: true });
+    }
+
+    /**
+     * Render de offre de stage
+     * @returns {JSX.Element}
+     */
     render() {
         if (this.state.showDetails) {
             return <DetailOffre od={this.state.currentOd}></DetailOffre>
+        }
+
+        if (this.state.showModif) {
+            return <AjoutOffreDemandeStage od={this.state.currentOd}></AjoutOffreDemandeStage>
         }
 
         return(
             <div className="stage-demande">
                 <h2>Offres de stage <FontAwesomeIcon icon={faHandPointDown}/></h2>
                 <br/>
-                {offreDemande.map((od, index) => {
+                {this.state.demandes.map((od, index) => {
                     if(od.type === "offre")
                         return <div>
                             <div className="col-8">
@@ -74,8 +109,8 @@ class OffreStage extends Component {
                                                 <Button onClick={this.handleOnClickDetail.bind(this, od)} variant="danger">Détails</Button>
                                             </div>
                                             <div className="col-4">
-                                                <Button variant="outline-success">Modifier</Button>
-                                                <Button variant="outline-danger">Supprimer</Button>
+                                                <Button onClick={this.handleOnClickDetail.bind(this, od)} variant="outline-success">Modifier</Button>
+                                                <Button onClick={this.handleOnClickDelete.bind(this, od)}  variant="outline-danger">Supprimer</Button>
                                             </div>
                                         </div>
                                     </Card.Body>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import SideNav, {NavItem, NavIcon, NavText} from "@trendmicro/react-sidenav";
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 import "./Admin.scss";
@@ -9,12 +9,16 @@ import { faCoffee, faUserNinja, faHome, faGraduationCap, faUserTie, faSignOutAlt
  * Barre de navigation latérale du portail admin
  */
 
-function Sidebar() {
-    return (
-        <SideNav>
+class Sidebar extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render () {
+        return <SideNav>
             <SideNav.Toggle />
             <SideNav.Nav defaultSelected="home">
-                <NavItem eventKey="home">
+                <NavItem onClick="home">
                     <NavIcon>
                         <FontAwesomeIcon icon={faHome} />
                     </NavIcon>
@@ -55,7 +59,7 @@ function Sidebar() {
                 </NavItem>
             </SideNav.Nav>
         </SideNav>
-    );
+    }
 }
 
 export default Sidebar;

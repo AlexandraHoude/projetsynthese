@@ -21,7 +21,7 @@ class AccueilAdmin extends Component {
             return(
                 <div>
                     <NavBarAdmin></NavBarAdmin>
-                    <Sidebar></Sidebar>
+                    <Sidebar typeConnexion={this.state.typeConnexion}></Sidebar>
                     <DemandeStage></DemandeStage>
                 </div>
             )
@@ -29,7 +29,7 @@ class AccueilAdmin extends Component {
             return(
                 <div>
                     <NavBarAdmin></NavBarAdmin>
-                    <Sidebar></Sidebar>
+                    <Sidebar typeConnexion={this.state.typeConnexion}></Sidebar>
                     <OffreStage></OffreStage>
                 </div>
             )
