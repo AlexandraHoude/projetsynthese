@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Hero from "./Hero";
 import NavBar from "./NavBar";
-import stage from "../../img/stage.png"
+import stage from "../../img/stage.jpg"
 import PiedPage from "./PiedPage";
 import Card from "react-bootstrap/Card";
 import CardColumns from "react-bootstrap/CardColumns";

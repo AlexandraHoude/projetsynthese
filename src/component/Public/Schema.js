@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import schema from "../../img/process.png"
+import schema from "../../img/process.jpg"
 import "./Public.scss";
 import Button from "react-bootstrap/Button";
 
